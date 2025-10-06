@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainTicketXchange - Buy & Sell Second-Hand Train Tickets</title>
+    <meta name="description" content="Find and sell second-hand train tickets easily. Save money on your railway journeys with TrainTicketXchange.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="TrainTicketXchange - Second-Hand Train Tickets">
+    <meta property="og:description" content="Buy and sell second-hand train tickets safely and easily">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="nav-icon">🚂</span>
+                <span class="nav-title">TrainTicketXchange</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#search" class="nav-link">Search Tickets</a>
+                <a href="#sell" class="nav-link">Sell Tickets</a>
+                <a href="#about" class="nav-link">About</a>
+                <button class="btn btn-primary" id="loginBtn">Login</button>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero" id="search">
+            <div class="hero-content">
+                <h1 class="hero-title">Find Your Perfect Train Ticket Deal</h1>
+                <p class="hero-subtitle">Buy and sell second-hand train tickets safely and easily</p>
+                
+                <!-- Search Form -->
+                <form class="search-form" id="searchForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="from" class="form-label">From</label>
+                            <input type="text" id="from" class="form-input" placeholder="Departure station" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="to" class="form-label">To</label>
+                            <input type="text" id="to" class="form-input" placeholder="Destination station" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="form-label">Date</label>
+                            <input type="date" id="date" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passengers" class="form-label">Passengers</label>
+                            <select id="passengers" class="form-input">
+                                <option value="1">1 Passenger</option>
+                                <option value="2">2 Passengers</option>
+                                <option value="3">3 Passengers</option>
+                                <option value="4">4+ Passengers</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <span class="btn-icon">🔍</span>
+                        Search Tickets
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results" id="results">
+            <div class="results-header">
+                <h2 class="results-title">Available Tickets</h2>
+                <div class="results-filters">
+                    <select id="sortBy" class="filter-select">
+                        <option value="price">Sort by Price</option>
+                        <option value="time">Sort by Time</option>
+                        <option value="date">Sort by Date</option>
+                    </select>
+                    <div class="filter-group">
+                        <label class="filter-label">Max Price:</label>
+                        <input type="range" id="priceRange" class="price-range" min="0" max="500" value="500">
+                        <span id="priceValue" class="price-value">£500</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tickets-grid" id="ticketsGrid">
+                <!-- Tickets will be inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Sell Section -->
+        <section class="sell-section" id="sell">
+            <div class="sell-content">
+                <h2 class="section-title">Got tickets to sell?</h2>
+                <p class="section-subtitle">List your unused train tickets and help fellow travelers save money</p>
+                <button class="btn btn-secondary btn-large" id="sellTicketBtn">
+                    <span class="btn-icon">📝</span>
+                    List Your Ticket
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">TrainTicketXchange</h3>
+                <p class="footer-text">Making train travel more affordable for everyone</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#search">Search Tickets</a></li>
+                    <li><a href="#sell">Sell Tickets</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-heading">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#help">Help Center</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#safety">Safety Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TrainTicketXchange. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/tickets.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
